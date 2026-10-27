@@ -6,7 +6,7 @@ def clean_gender(series):
             "MALE":"M",
             "FEMALE":"F"
             })
-    clean = clean.where(clean.isin(["M","S",""]),"U")
+    clean = clean.where(clean.isin(["M","F",""]),"U")
 
     return clean
 
