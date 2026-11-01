@@ -41,18 +41,18 @@ def clean_roster(raw):
     return df,rejected
 
 
+if __name__ == "__main__":
+    raw = pd.DataFrame({
+        "member_id": ["M1", " ", "M2", "M1", ""],
+        "gender":    [" f", "Male", "FEMALE ", "F", "m"],
+        "state":     ["tx", "fl", " ca", "tx", "ny"],
+    })
 
-raw = pd.DataFrame({
-    "member_id": ["M1", " ", "M2", "M1", ""],
-    "gender":    [" f", "Male", "FEMALE ", "F", "m"],
-    "state":     ["tx", "fl", " ca", "tx", "ny"],
-})
 
 
-
-cleaned , Rejected = clean_roster(raw)
-print(cleaned)
-print(Rejected)
+    cleaned , Rejected = clean_roster(raw)
+    print(cleaned)
+    print(Rejected)
 
 # print(clean_gender(pd.Series([" M ","m","F","Male","Female","other"])))
 
