@@ -12,7 +12,7 @@ logging.basicConfig(
 
 
 
-def clean_roaster(raw):
+def clean_roster(raw):
     df = raw.copy()
     df["gender"] = cleaners.clean_gender(df["gender"])
     df["state"] = cleaners.clean_state(df["state"])
@@ -50,7 +50,7 @@ raw = pd.DataFrame({
 
 
 
-cleaned , Rejected = clean_roaster(raw)
+cleaned , Rejected = clean_roster(raw)
 print(cleaned)
 print(Rejected)
 
