@@ -14,3 +14,10 @@ def clean_state(Series):
     clean = Series.str.strip().str.upper()
 
     return clean
+
+def shout(textVal):
+    cleaned = textVal.upper()
+
+    return cleaned
+
+
